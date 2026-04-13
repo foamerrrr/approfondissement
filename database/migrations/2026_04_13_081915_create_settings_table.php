@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('user_id')->unique()->constrained()->cascadeOnDelete();
             $table->string('theme');
             $table->string('lang');
-            $table->foreignId('user_id')->unique()->constrained();
+            $table->timestamps();
         });
     }
 

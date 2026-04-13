@@ -6,12 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Settings extends Model
 {
-        protected $fillable = [
+    protected $fillable = [
+        'user_id',
         'theme',
         'lang',
     ];
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }
