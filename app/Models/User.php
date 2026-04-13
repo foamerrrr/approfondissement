@@ -48,7 +48,7 @@ class User extends Authenticatable
         ];
     }
 
-    protected function settings() {
+    public function settings() {
         return $this->hasOne(Settings::class);
     }
 }
