@@ -11,4 +11,9 @@ class SubscriptionOrder extends Model
         'price',
         'duration_months',
     ];
+
+    public function order()
+    {
+        return $this->morphOne(Order::class, 'orderable');
+    }
 }

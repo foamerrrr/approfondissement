@@ -19,6 +19,9 @@ class OrderSeeder extends Seeder
         $user->orders()->create([
             'amount' => 50,
             'status'  => 'paid',
+            'user_id' => 1,
+            'orderable_id' => 1,
+            'orderable_type' => App\Models\ProductOrder::class
         ]);
     }
 }
