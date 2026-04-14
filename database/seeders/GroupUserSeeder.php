@@ -20,6 +20,6 @@ class GroupUserSeeder extends Seeder
             'name' => 'Family'
         ]);
 
-        $group->users()->attach($user->id);
+        $group->users()->syncWithoutDetaching([$user->id]);
     }
 }
